@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Feedback</title></head>
+<body>
+  <h1>Feedback</h1>
+  <form method="post" action="#">
+    <label>Feedback:<br><textarea name="feedback" rows="5" cols="40"></textarea></label><br>
+    <label><input type="radio" name="rating" value="good"> Good</label>
+    <label><input type="radio" name="rating" value="average"> Average</label>
+    <label><input type="radio" name="rating" value="poor"> Poor</label><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Preview (iframe)</h2>
+  <iframe srcdoc="&lt;p&gt;Thank you for your feedback&lt;/p&gt;" style="width:100%;height:80px;border:1px solid #ccc;"></iframe>
+</body>
+</html>

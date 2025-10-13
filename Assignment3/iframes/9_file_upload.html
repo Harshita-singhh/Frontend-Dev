@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>File Upload</title></head>
+<body>
+  <h1>Upload Image</h1>
+  <form enctype="multipart/form-data">
+    <input type="file" name="photo" accept=".jpg,.jpeg,.png" required>
+    <p>Allowed files: .jpg, .jpeg, .png only.</p>
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Preview (iframe)</h2>
+  <iframe srcdoc="&lt;p&gt;No file uploaded yet.&lt;/p&gt;" style="width:100%;height:80px;border:1px solid #ccc;"></iframe>
+</body>
+</html>

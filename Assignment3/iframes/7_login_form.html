@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Login</title></head>
+<body>
+  <h1>Login</h1>
+  <!-- CSRF token helps prevent cross-site request forgery by ensuring the form submission comes from the original site -->
+  <form>
+    <input type="hidden" name="csrf_token" value="dummy_token_12345">
+    <label>Username: <input type="text" name="username" required></label><br>
+    <label>Password: <input type="password" name="password" required></label><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <h2>Login Preview (iframe)</h2>
+  <iframe srcdoc="&lt;form&gt;&lt;input placeholder='username'&gt;&lt;/form&gt;" style="width:100%;height:100px;border:1px solid #ccc;"></iframe>
+</body>
+</html>
