@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>9 - Newspaper Columns</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:Georgia,serif;background:#f6f5ef;margin:0;padding:2rem}
+    .content{column-count:3;column-gap:2rem;max-width:1100px;margin:0 auto;background:#fff;padding:1.5rem}
+    h1{column-span:all;text-align:center}
+    img.float-left{float:left;margin:0 1rem 1rem 0;width:150px}
+    @media(max-width:900px){.content{column-count:2}}
+    @media(max-width:600px){.content{column-count:1}}
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Magazine Title</h1>
+    <img class="float-left" src="https://via.placeholder.com/150" alt="">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+    <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+    <p>More paragraphs to show multi-column layout and justification example.</p>
+  </div>
+</body>
+</html>

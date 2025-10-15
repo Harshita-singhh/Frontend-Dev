@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>7 - Contact Form</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;height:100vh;display:flex;align-items:center;justify-content:center;background:#eef2f5}
+    form{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);width:90%;max-width:480px}
+    input,textarea{width:100%;padding:.6rem;border:1px solid #ccc;border-radius:6px;margin-bottom:1rem}
+    input:focus,textarea:focus{outline:none;border-color:#0a74da;box-shadow:0 0 0 3px rgba(10,116,218,0.12)}
+    button{padding:.6rem 1rem;background:#0a74da;color:#fff;border:none;border-radius:6px}
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Contact Us</h2>
+    <label>Name<input type="text" required></label>
+    <label>Email<input type="email" required></label>
+    <label>Subject<input type="text"></label>
+    <label>Message<textarea rows="5"></textarea></label>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>

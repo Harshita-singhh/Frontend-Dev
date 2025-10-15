@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>1 - Personal Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root{ --accent:#0a74da; --bg:#f7f9fc; --text:#102a43 }
+    *{box-sizing:border-box}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:var(--text);}
+    header{position:fixed;top:0;left:0;right:0;height:60px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 1rem;z-index:10}
+    header nav a{color:#fff;margin-left:1rem;text-decoration:none}
+    main{padding-top:80px;display:flex;gap:2rem;align-items:center;max-width:1000px;margin:2rem auto}
+    .bio{flex:1;font-size:1rem}
+    .profile{width:160px;height:160px;border-radius:50%;background:#ddd}
+    footer{display:flex;align-items:center;justify-content:center;height:60px;background:#022c43;color:#fff;position:relative;margin-top:2rem}
+    /* demonstrate units */
+    h1{font-size:2rem}
+    .bio p{margin:1rem 0;font-size:1rem}
+    .note{font-size:0.9em}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight:700">Your Name</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="bio">
+      <h1>Hi, I'm Your Name</h1>
+      <p>A short bio paragraph about your background, interests, and work. This section uses a mix of units: padding in px, font-size in rem/em, and width as %.</p>
+      <p class="note">Units example: 160px image, 1rem font, 2rem heading.</p>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/160" alt="Profile" class="profile">
+    </div>
+  </main>
+  <footer>
+    <div>&copy; 2025 Your Name</div>
+  </footer>
+</body>
+</html>
