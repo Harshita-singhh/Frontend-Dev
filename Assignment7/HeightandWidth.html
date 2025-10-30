@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Height and Width Practice Layout</title>
+    <style>
+        /* Full-viewport centering using Flexbox */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            align-items: center;       /* vertical center */
+            justify-content: center;   /* horizontal center */
+            background: #f3f6f9;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        /* Row that holds the three boxes */
+        .boxes {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        /* Common box styling */
+        .box {
+            color: #fff;
+            padding: 0.75rem;
+            box-sizing: border-box;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            font-size: 0.95rem;
+            overflow: visible; /* default, overridden per-box where demonstrated */
+        }
+
+        /* Box 1: uses px units and demonstrates min-height + overflow (scroll) */
+        .box--px {
+            width: 250px;             /* px unit for width */
+            height: 150px;            /* px unit for height */
+            min-height: 120px;        /* demonstrates min-height */
+            background: linear-gradient(135deg,#ff6b6b,#ff8a8a);
+            overflow: auto;           /* enables scrolling when content exceeds box */
+        }
+
+        /* Box 2: uses % for width and vh for height, demonstrates max-width + overflow hidden */
+        .box--percent {
+            width: 35%;               /* percentage width */
+            height: 22vh;             /* viewport-height unit */
+            max-width: 420px;         /* demonstrates max-width restraint */
+            background: linear-gradient(135deg,#4dabf7,#74c0fc);
+            overflow: hidden;         /* clipped overflow to show effect */
+        }
+
+        /* Box 3: uses em units and demonstrates min-height and flexible sizing */
+        .box--em {
+            width: 12em;              /* em unit */
+            height: 8em;              /* em unit */
+            min-height: 6em;          /* demonstrates min-height in em */
+            background: linear-gradient(135deg,#51cf66,#8ce99a);
+            overflow: visible;
+        }
+
+        /* Small captions inside boxes */
+        .label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .note {
+            font-size: 0.83rem;
+            opacity: 0.95;
+            line-height: 1.25;
+        }
+
+        /* Make layout responsive for very narrow screens */
+        @media (max-width: 640px) {
+            .boxes {
+                flex-direction: column;
+            }
+            .box--percent { width: 80%; max-width: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes" aria-label="Three demonstration boxes">
+        <div class="box box--px" title="px box">
+            <div class="label">Box 1 — px (scroll)</div>
+            <div class="note">
+                This box uses fixed px sizing (width: 250px; height: 150px) and a min-height.
+                Overflow is set to auto, so this long paragraph will create a vertical scrollbar
+                when the content exceeds the box height. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+            </div>
+        </div>
+
+        <div class="box box--percent" title="% & vh box">
+            <div class="label">Box 2 — % & vh (clipped)</div>
+            <div class="note">
+                This box uses percent width (35%) and viewport-height (22vh). It also demonstrates
+                max-width (420px). Overflow is hidden, so extra content will be clipped.
+                Resize the window to observe how percentage and vh affect its size.
+            </div>
+        </div>
+
+        <div class="box box--em" title="em box">
+            <div class="label">Box 3 — em</div>
+            <div class="note">
+                Width and height here are in em units (12em × 8em) and a min-height is applied.
+                em units scale with the font-size, which makes this box respond if text size changes.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

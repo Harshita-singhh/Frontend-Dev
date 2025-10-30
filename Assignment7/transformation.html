@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transformations Showcase</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            transition: all 0.4s ease;
+        }
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+        .scale:hover {
+            transform: scale(1.2);
+        }
+        .translate:hover {
+            transform: translate(20px, 20px);
+        }
+        .skew:hover {
+            transform: skew(20deg, 10deg);
+        }
+        .label {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box rotate">Rotate</div>
+        <div class="box scale">Scale</div>
+        <div class="box translate">Translate</div>
+        <div class="box skew">Skew</div>
+    </div>
+    <div class="label">Hover over the boxes to see transformations!</div>
+</body>
+</html>
