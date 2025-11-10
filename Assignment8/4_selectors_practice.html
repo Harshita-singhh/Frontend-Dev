@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Practice</title>
+<style>
+	/* Element selector: styles all paragraph elements */
+	p { line-height: 1.6; }
+
+	/* Class selector: reusable styling for boxes */
+	.box { background:#ffffff; border-radius:12px; padding:14px; box-shadow:0 8px 24px rgba(0,0,0,.08); }
+
+	/* ID selector: unique highlight area */
+	#special { border:2px dashed #2563eb; padding:12px; border-radius:10px; }
+
+	/* Attribute selector: target links that open in new tab */
+	a[target="_blank"] { color:#2563eb; text-decoration: underline; }
+
+	/* Descendant selector: style list items inside .playground only */
+	.playground li { margin:4px 0; }
+
+	/* Child combinator (>): direct children cards only */
+	.container > .card { border: 1px solid #e2e8f0; }
+
+	/* Adjacent sibling (+): style the element immediately after h3 */
+	h3 + p { color:#475569; margin-top: 0; }
+
+	/* General sibling (~): any following siblings that match */
+	.note ~ p { font-size: 14px; color:#64748b; }
+
+	:root { --bg:#f8fafc; --text:#0f172a; }
+	* { box-sizing: border-box; }
+	body { margin:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, Segoe UI, Roboto, Arial; }
+	header, footer { text-align:center; padding:16px; background:#ffffff; box-shadow:0 6px 20px rgba(0,0,0,.06); }
+	main { max-width: 980px; margin: 20px auto; padding: 0 16px; display: grid; gap: 16px; }
+	.container { display:grid; gap:16px; }
+	.card { background:#fff; border-radius:12px; padding:16px; }
+	.playground { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+	@media (max-width: 700px) { .playground { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+	<header>
+		<h1>4) CSS Selectors Practice</h1>
+	</header>
+	<main class="container">
+		<section class="card box">
+			<h2>Basic Selectors</h2>
+			<p>This paragraph is styled by the element selector.</p>
+			<p id="special">This unique block uses an ID selector for dashed borders.</p>
+			<p>Visit <a href="https://developer.mozilla.org" target="_blank" rel="noreferrer">MDN</a> in a new tab (attribute selector).</p>
+		</section>
+		<section class="card">
+			<h2>Combinators</h2>
+			<div class="playground">
+				<div>
+					<h3>Adjacent sibling</h3>
+					<p>This paragraph is adjacent to the heading (styled via +).</p>
+					<p>But this paragraph is not adjacent, so style differs.</p>
+				</div>
+				<div>
+					<h3>Descendant and general sibling</h3>
+					<p class="note box">This is a note. Paragraphs after it become smaller (~).</p>
+					<p>Sibling paragraph 1 after note.</p>
+					<p>Sibling paragraph 2 after note.</p>
+					<ul>
+						<li>List inside <code>.playground</code> uses descendant selector.</li>
+						<li>Second item styled similarly.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<small>&copy; Practice Footer</small>
+	</footer>
+</body>
+</html>
+
+

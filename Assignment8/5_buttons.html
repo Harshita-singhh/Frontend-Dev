@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Button Collection</title>
+<style>
+	:root { --primary:#2563eb; --secondary:#0ea5e9; --text:#0f172a; --bg:#f8fafc; --muted:#64748b; }
+	* { box-sizing: border-box; }
+	body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+	h1 { text-align:center; margin: 24px 0; }
+	.wrap { display:flex; align-items:center; justify-content:center; }
+	.row {
+		display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:center;
+		background:#fff; border-radius:14px; padding:16px; margin: 0 16px 24px;
+		box-shadow:0 10px 28px rgba(0,0,0,.08);
+	}
+	button {
+		font: inherit;
+		padding: 10px 16px;
+		border-radius: 10px;
+		border: none;
+		cursor: pointer;
+		transition: transform .12s ease-in-out, filter .2s ease-in-out, box-shadow .2s ease-in-out, background .2s;
+		box-shadow: 0 6px 14px rgba(0,0,0,.08);
+	}
+	.btn-primary { background: var(--primary); color: #fff; }
+	.btn-secondary { background: var(--secondary); color: #06283d; }
+	.btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); box-shadow:none; }
+	.btn-disabled { background: #e5e7eb; color:#9ca3af; cursor: not-allowed; box-shadow:none; }
+	button:hover { filter: brightness(.98); }
+	button:active { transform: scale(.98); }
+	button:focus { outline: 3px solid rgba(37,99,235,.3); outline-offset:2px; }
+	button:disabled, .btn-disabled { pointer-events:none; }
+	.info { text-align:center; color:var(--muted); margin-bottom: 10px; }
+</style>
+</head>
+<body>
+	<h1>5) Styled Button Collection</h1>
+	<p class="info">Hover and active include transitions; focus and disabled states demonstrated.</p>
+	<div class="wrap">
+		<div class="row">
+			<button class="btn-primary">Primary</button>
+			<button class="btn-secondary">Secondary</button>
+			<button class="btn-outline">Outline</button>
+			<button class="btn-primary" disabled>:disabled Primary</button>
+			<button class="btn-disabled">Disabled Styled</button>
+		</div>
+	</div>
+</body>
+</html>
+
+

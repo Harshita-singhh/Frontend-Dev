@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Showcase Layout</title>
+<style>
+	:root { --bg:#f8fafc; --text:#0f172a; }
+	* { box-sizing: border-box; }
+	body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+	h1 { text-align:center; margin: 24px 0; }
+	.gallery {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 16px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+	}
+	.card {
+		background:#fff;
+		border-radius: 14px;
+		overflow: hidden;
+		box-shadow: 0 10px 28px rgba(0,0,0,.08);
+	}
+	.figure {
+		position: relative;
+		aspect-ratio: 4 / 3;
+		overflow: hidden;
+	}
+	.figure img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform .25s ease-in-out;
+	}
+	.overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0,0,0,.0);
+		transition: background .25s ease-in-out;
+	}
+	.card:hover .figure img { transform: scale(1.1); }
+	.card:hover .overlay { background: rgba(0,0,0,.25); }
+	.figcaption {
+		padding: 12px 14px;
+	}
+	.figcaption figcaption {
+		display: block;
+		color: #475569;
+		font-size: 14px;
+		margin-top: 2px;
+	}
+	@media (max-width: 700px) {
+		.gallery { grid-template-columns: 1fr; }
+	}
+</style>
+</head>
+<body>
+	<h1>3) Image Showcase</h1>
+	<section class="gallery">
+		<figure class="card">
+			<div class="figure">
+				<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Mountain">
+				<div class="overlay"></div>
+			</div>
+			<div class="figcaption">
+				<strong>Mountain Sunrise</strong>
+				<figcaption>Golden hour over peaks.</figcaption>
+			</div>
+		</figure>
+		<figure class="card">
+			<div class="figure">
+				<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Ocean">
+				<div class="overlay"></div>
+			</div>
+			<div class="figcaption">
+				<strong>Ocean Waves</strong>
+				<figcaption>Rolling tides at dusk.</figcaption>
+			</div>
+		</figure>
+		<figure class="card">
+			<div class="figure">
+				<img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="Forest">
+				<div class="overlay"></div>
+			</div>
+			<div class="figcaption">
+				<strong>Misty Forest</strong>
+				<figcaption>Fog among the trees.</figcaption>
+			</div>
+		</figure>
+		<figure class="card">
+			<div class="figure">
+				<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Desert">
+				<div class="overlay"></div>
+			</div>
+			<div class="figcaption">
+				<strong>Desert Lines</strong>
+				<figcaption>Wind-shaped dunes.</figcaption>
+			</div>
+		</figure>
+		<figure class="card">
+			<div class="figure">
+				<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop" alt="City">
+				<div class="overlay"></div>
+			</div>
+			<div class="figcaption">
+				<strong>City Lights</strong>
+				<figcaption>Night skyline glow.</figcaption>
+			</div>
+		</figure>
+		<figure class="card">
+			<div class="figure">
+				<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Aurora">
+				<div class="overlay"></div>
+			</div>
+			<div class="figcaption">
+				<strong>Northern Lights</strong>
+				<figcaption>Colors across the sky.</figcaption>
+			</div>
+		</figure>
+	</section>
+</body>
+</html>
+
+
