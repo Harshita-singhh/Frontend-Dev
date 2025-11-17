@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HARSHITA — Demo Site</title>
+  <style>
+    :root { --accent:#1a73e8; --muted:#666; --bg:#f9f9fb; }
+    body { margin:0; font-family: Arial, sans-serif; color:#222; background:var(--bg); }
+    header { background:var(--accent); color:#fff; padding:1.25rem; text-align:center; }
+    nav { background:#fff; padding:0.5rem 1rem; border-bottom:1px solid #e6e6e6; }
+    nav a { margin-right:1rem; color:var(--accent); text-decoration:none; font-weight:600; }
+    .container { display:flex; gap:2rem; max-width:1000px; margin:1.5rem auto; padding:0 1rem; }
+    main { flex:2; background:#fff; padding:1rem 1.25rem; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.04); }
+    aside { flex:1; background:#fff; padding:1rem; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.04); height:fit-content; }
+    h1,h2 { margin:0 0 0.5rem 0; }
+    h2 { color:var(--accent); }
+    section p, article p { line-height:1.5; }
+    footer { text-align:center; padding:1rem; margin-top:1.25rem; color:var(--muted); }
+    .links a { display:block; color:#0b8043; text-decoration:none; margin:0.25rem 0; }
+    mark { background:#ffeb3b; padding:0 0.15rem; }
+    code { background:#f4f4f4; padding:0.15rem 0.3rem; border-radius:4px; font-family:Consolas,monospace; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HARSHITA — Demo Site</h1>
+  </header>
+  <nav>
+    <div style="max-width:1000px;margin:0 auto;padding:0 1rem;">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="useful_links.html">Useful Links</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p>
+          Hello — I'm Harshita, a student learning web development. I enjoy building small pages to practice HTML and CSS.
+          I like to <strong>experiment</strong> with layout and typography, and I often sketch ideas before coding. My goal
+          is to make pages that are clear, accessible, and <em>pleasant</em> to use.
+        </p>
+      </section>
+
+      <article style="margin-top:1rem;">
+        <h2>My First Blog</h2>
+        <p>
+          Today I started assembling a small collection of example pages. I practiced headings, links, images, and inline formatting.
+          It felt rewarding to turn ideas into a visible page — small steps, steady progress. Tip: try <mark>building small demos</mark> frequently
+          to learn faster.<br>
+          <small>Updated recently</small>
+        </p>
+      </article>
+
+      <section style="margin-top:1rem;">
+        <h2>Quick Example</h2>
+        <p>
+          You can print a message in JavaScript using <code>console.log('Hello World');</code> — try it in the browser console.
+        </p>
+      </section>
+    </main>
+
+    <aside>
+      <h2>Useful Links</h2>
+      <div class="links">
+        <a href="https://your-portfolio.example.com" target="_blank" rel="noopener">My Portfolio (placeholder)</a>
+        <a href="https://www.example.com" target="_blank" rel="noopener">Example.com</a>
+      </div>
+
+      <h2 style="margin-top:1rem;">Pages</h2>
+      <div class="links">
+        <a href="headings.html">Headings</a>
+        <a href="hyperlink.html">Hyperlink</a>
+        <a href="image.html">Image</a>
+        <a href="blockquote.html">Quote</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    &copy; 2025 HARSHITA — Built as a demo of HTML fundamentals
+  </footer>
+</body>
+</html>
