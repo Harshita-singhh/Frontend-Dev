@@ -26,4 +26,5 @@ function bookTicket(name, email, seats) {
     console.log("Ticket booked successfully!");
     console.log("Booking Details:", bookingInfo);
 }
+
 bookTicket("Harshita", "harshita@example.com", 5);
