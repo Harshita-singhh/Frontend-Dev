@@ -34,4 +34,5 @@ function calculate(operation, num1, num2) {
 
 calculate("divide", num1, num2);
 calculate("root", num1, -1);
+
 calculate("multiply", num1, num2);
