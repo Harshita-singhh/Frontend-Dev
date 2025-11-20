@@ -1,0 +1,6 @@
+"use strict";
+function showMessage() {
+    let greeting = "Welcome"; // declared with let
+    console.log(greeting);
+}
+showMessage();
